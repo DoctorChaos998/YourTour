@@ -60,14 +60,16 @@
   line-height: 142%;
   letter-spacing: -0.01em;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover{
     background: #EFA501;
     color: white;
   }
+
   &:active{
     background: #F8E6BE;
-
+    color: #1B1F2B;
   }
 }
 

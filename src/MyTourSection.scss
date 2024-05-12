@@ -1,5 +1,5 @@
 .myTourWrapper{
-  margin-top: 100px;
+  margin-top: 135px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,10 +7,167 @@
   flex-direction: column;
 }
 
-.myTourHeader{
+.myTourHeaderContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: 142px;
+  gap: 35px;
+}
 
+.myTourHeader{
+  font-size: 59px;
+  font-weight: 700;
+  line-height: 73.16px;
+  text-align: center;
+  color: #1B1F2B;
+}
+
+.myTourHeaderMenu{
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.myTourMenuItem{
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 28.06px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  color: #1B1F2B;
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    background-color: #1b1f2b;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::before{
+    opacity: 1;
+  }
+}
+
+.myTourMenuItemActive{
+  color: #EFA501;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    background-color: #EFA501;
+    z-index: 2;
+    opacity: 1;
+  }
 }
 
 .myTourContainer{
+  margin-top: 100px;
+  width: 1170px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
+.myTourCardContainer{
+  position: relative;
+  width: 370px;
+  height: 531px;
+  border-radius: 50px;
+  overflow: hidden;
+
+  &:hover .myTourCardImage{
+    transform: scale(1.2);
+  }
+
+  &:hover .myTourCardLinkContainer{
+    background-color: #286562;
+  }
+}
+
+.myTourCardGradient{
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.myTourCardImage{
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.myTourCardDescriptionContainer{
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.myTourCardDescriptionHeaderContainer{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 126px;
+  gap: 16px;
+}
+
+.myTourCardDescriptionHeader{
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 42.7px;
+  text-align: left;
+  width: 270px;
+  height: 86px;
+
+}
+
+.myTourCardDescriptionSubHeader{
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24.14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.myTourCardLinkContainer{
+  display: flex;
+  position: relative;
+  gap: 15px;
+  align-items: center;
+  border-radius: 50px;
+  width: 199px;
+  height: 42px;
+  left: -20px;
+  top: 7px;
+  padding: 7px 20px 7px 20px;
+  cursor: pointer;
+}
+
+.myTourCardLinkDescription{
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 28.06px;
+  text-align: left;
 }

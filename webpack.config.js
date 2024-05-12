@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env) => {
     return {
         mode: env.mode,
-        entry: path.resolve(__dirname, 'src', 'index.scss'),
+        entry: [path.resolve(__dirname, 'src', 'index.scss')],
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].[contenthash].js',
@@ -24,11 +24,15 @@ module.exports = (env) => {
                 {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
-                }
+                },
+                {
+                    test: /\.html$/i,
+                    loader: "html-loader",
+                },
             ],
         },
         plugins: [
-            new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src', 'public', 'index.html')}),
+            new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src', 'public', 'index.html'), favicon: path.resolve(__dirname, 'src', 'assets', 'Images', 'favicon.png')}),
             new MiniCssExtractPlugin()
         ],
         devServer: {
