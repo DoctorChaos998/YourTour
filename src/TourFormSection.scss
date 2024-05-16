@@ -40,7 +40,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 70px;
-  gap: 33px;
+  gap: 30px;
   width: 1170px;
   height: 986px;
   background: #FFFFFF;
@@ -49,12 +49,14 @@
 .tourFormFieldsGroup{
   display: flex;
   gap: 30px;
+  width: 100%;
 }
 
 .tourFormInputContainer{
   display: flex;
   gap: 8px;
   flex-direction: column;
+  width: 50%;
 }
 
 .tourFormInputHeader{
@@ -65,14 +67,13 @@
 }
 
 .tourFormInputLabel{
-  width: 500px;
-  border-radius: 10px;
-  border: 1px solid #F4F0E9;
-  background: #F9F7F4;
   cursor: pointer;
 }
 
 .tourFormInput{
+  border-radius: 10px;
+  border: 1px solid #F4F0E9;
+  background: #F9F7F4;
   padding: 20px;
   color: #1B1F2B;
   font-size: 20px;
@@ -81,8 +82,6 @@
   text-align: left;
   font-family: "Roboto", sans-serif;
   width: 100%;
-  background-color: transparent;
-  border: none;
   outline: none;
   cursor: pointer;
 
@@ -97,10 +96,7 @@
 }
 
 .tourFormSelectLabel{
-  width: 500px;
-  border-radius: 10px;
-  border: 1px solid #F4F0E9;
-  background: #F9F7F4;
+  width: 100%;
   cursor: pointer;
   position: relative;
 
@@ -120,11 +116,15 @@
 }
 
 .tourFormSelect{
-  font: 400 1.25rem / 1.4 roboto, arial, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #F4F0E9;
+  background: #F9F7F4;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.4px;
   text-align: left;
+  font-family: "Roboto", sans-serif;
   width: 100%;
-  background-color: transparent;
-  border: none;
   outline: none;
   cursor: pointer;
   padding: 20px;
@@ -137,12 +137,19 @@
   }
 }
 
+.tourFormTextAreaContainer{
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+}
+
 .tourFormTextArea{
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 20px;
-  width: 1030px;
+  width: 100%;
   height: 152px;
   background: #F9F7F4;
   border: 1px solid #F4F0E9;
@@ -161,6 +168,7 @@
   display: flex;
   gap: 31px;
   width: 100%;
+  align-items: center;
 }
 
 .tourFormRadioContainer{
@@ -168,6 +176,10 @@
   gap: 11px;
   align-items: center;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.4px;
+  text-align: left;
 }
 
 .tourFormRadioButton{
@@ -233,10 +245,18 @@
   letter-spacing: -0.01em;
   text-align: left;
   color: #A6A6A6;
+  width: 509px;
+  height: 24px;
 }
 
 .tourFormCheckboxLink{
   color: #1b1f2b;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24.14px;
+  letter-spacing: -0.01em;
+  text-align: left;
 }
 
 .tourFormButtonsContainer{
@@ -255,6 +275,7 @@
   text-align: center;
   border: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .tourFormResetButton{
@@ -268,4 +289,230 @@
   text-align: center;
   border: none;
   color: #286562;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .tourFormContainer{
+    width: 918px;
+    height: 966px;
+    padding: 60px;
+    border-radius: 50px;
+  }
+
+  .tourFormFieldsGroup{
+    gap: 20px
+  }
+
+  .tourFormCheckboxContainer{
+    gap: 11px;
+    position: relative;
+    top: 4px;
+  }
+
+  .tourFormButtonsContainer{
+    position: relative;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tourFormWrapper{
+    margin-top: 75px;
+    gap: 40px;
+  }
+
+  .tourFormHeaderContainer{
+    gap: 20px;
+  }
+
+  .tourFormHeader{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 38.08px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .tourFormSubHeader{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: center;
+    height: auto;
+    width: auto;
+  }
+
+  .tourFormContainer{
+    width: 318px;
+    height: 1110px;
+    padding: 20px 20px 40px 20px;
+    gap: 30px;
+    border-radius: 30px;
+  }
+
+  .tourFormInputContainer{
+    width: 100%;
+  }
+
+  .tourFormFieldsGroup{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tourFormInputHeader{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: left;
+    height: 23px;
+  }
+
+  .tourFormTextAreaContainer{
+    top: -3px;
+    position: relative;
+  }
+
+  .tourFormTextArea{
+    width: 278px;
+    height: 132px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .tourFormSelectLabel{
+    &::after{
+      top: 13px;
+      right: 15px;
+    }
+  }
+
+  .tourFormInput, .tourFormSelect, .tourFormTextArea{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: left;
+  }
+
+  .tourFormCheckboxContainer{
+    width: 278px;
+    height: 69px;
+    gap: 10px;
+  }
+
+  .tourFormRadioButton{
+    height: 20px;
+    width: 20px;
+
+    &:checked::before{
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .tourFormRadioContainer{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: left;
+  }
+
+  .tourFormRadioGroup{
+    top: -5px;
+    gap: 30px;
+    position: relative;
+  }
+
+  .tourFormCheckboxContainer{
+    align-items: start;
+  }
+
+  .tourFormCheckbox{
+    width: 20px;
+    height: 20px;
+
+    &:checked::before{
+      width: 9px;
+      height: 5px;
+    }
+  }
+
+  .tourFormCheckboxContainer{
+    top: -5px;
+  }
+
+  .tourFormCheckboxText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: left;
+    width: 248px;
+    height: 69px;
+  }
+
+  .tourFormCheckboxLink{
+    color: #1b1f2b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: left;
+  }
+
+  .tourFormButtonsContainer{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 47px;
+    gap: 12px;
+    position: relative;
+    top: -7px
+  }
+
+  .tourFormResetButton, .tourFormSubmitButton{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    width: 134px;
+    padding: 12px;
+  }
+}
+
+@media (hover: hover) {
+  .tourFormTextArea, .tourFormInput, .tourFormSelect{
+    &:hover{
+      background: #F4F0E9;
+    }
+    &:focus{
+      border: 1px solid #A6A6A6
+    }
+  }
+
+  .tourFormCheckboxLink{
+    &:hover{
+      text-decoration: underline;
+    }
+    &:active{
+      color: #286562;
+    }
+  }
+
+  .tourFormSubmitButton{
+    &:hover{
+      background: #3B7E7B;
+    }
+    &:active{
+      background: #627F7E;
+    }
+  }
+
+  .tourFormResetButton{
+    &:hover{
+      background: #F1F3F2;
+    }
+    &:active{
+      background: #D9DFDB;
+    }
+  }
 }

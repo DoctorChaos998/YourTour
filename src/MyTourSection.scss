@@ -52,10 +52,6 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-
-  &:hover::before{
-    opacity: 1;
-  }
 }
 
 .myTourMenuItemActive{
@@ -87,14 +83,7 @@
   height: 531px;
   border-radius: 50px;
   overflow: hidden;
-
-  &:hover .myTourCardImage{
-    transform: scale(1.2);
-  }
-
-  &:hover .myTourCardLinkContainer{
-    background-color: #286562;
-  }
+  list-style: none;
 }
 
 .myTourCardGradient{
@@ -140,7 +129,6 @@
   text-align: left;
   width: 270px;
   height: 86px;
-
 }
 
 .myTourCardDescriptionSubHeader{
@@ -170,4 +158,121 @@
   font-weight: 700;
   line-height: 28.06px;
   text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .myTourContainer{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 18px;
+  }
+
+  .myTourCardContainer{
+    width: 450px;
+    height: 531px;
+  }
+
+  .myTourCardDescriptionHeader{
+    width: 350px;
+    height: 43px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myTourContainer{
+    gap: 18px;
+    margin-top: 50px;
+  }
+
+  .myTourHeaderContainer{
+    width: 360px;
+    gap: 30px;
+    height: auto;
+  }
+
+  .myTourHeaderMenu{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 320px;
+  }
+
+  .myTourHeader{
+    font-size: 34px;
+    line-height: 38.08px;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+
+  .myTourMenuItem{
+    font-size: 16px;
+    line-height: 22.72px;
+    text-align: left;
+  }
+
+  .myTourCardContainer{
+    width: 318px;
+    height: 318px;
+    border-radius: 20px;
+  }
+
+  .myTourCardDescriptionContainer{
+    padding: 25px;
+  }
+
+  .myTourCardDescriptionHeaderContainer{
+    gap: 13px;
+    width: auto;
+    height: auto;
+  }
+
+  .myTourCardDescriptionHeader{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    height: auto;
+  }
+
+  .myTourCardDescriptionSubHeader{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+
+  .myTourCardLinkDescription{
+    font-size: 16px;
+  }
+
+  .myTourMenuItemActive{
+    &::before{
+      bottom: -2px;
+    }
+  }
+
+  .myTourWrapper{
+    margin-top: 75px;
+  }
+}
+
+@media (hover: hover) {
+  .myTourMenuItem{
+    &:hover::before{
+      opacity: 1;
+    }
+  }
+
+  .myTourCardContainer{
+    &:hover .myTourCardImage{
+      transform: scale(1.2);
+    }
+
+    &:hover .myTourCardLinkContainer{
+      background-color: #286562;
+    }
+  }
 }

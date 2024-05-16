@@ -58,12 +58,63 @@
   color: #1B1F2B;
   text-decoration: none;
   cursor: pointer;
+}
 
-  &:hover{
-    text-decoration: underline;
+@media screen and (max-width: 767px) {
+  .CTAWrapper{
+    margin: 75px 0;
   }
 
-  &:active{
-    color: #286562;
+  .CTAContainer{
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .CTADescriptionContainer{
+    height: auto;
+    width: auto;
+  }
+
+  .CTAImageContainer{
+    width: 130px;
+    height: 133px;
+    border-radius: 20px;
+  }
+
+  .CTADescriptionHeader{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    width: 291px;
+    height: 56px;
+  }
+
+  .CTADescriptionSubHeader{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: center;
+    width: 291px;
+    height: 46px;
+  }
+
+  .CTADescriptionSubHeaderLink{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.72px;
+    text-align: center;
+  }
+}
+
+@media (hover: hover) {
+  .CTADescriptionSubHeaderLink {
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      color: #286562;
+    }
   }
 }

@@ -5,11 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env) => {
     return {
         mode: env.mode,
-        entry: [path.resolve(__dirname, 'src', 'index.scss')],
+        entry: [path.resolve(__dirname, 'src', 'index.scss'), path.resolve(__dirname, 'src', 'index.js')],
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].[contenthash].js',
-            clean: true
+            clean: process.env.NODE_ENV === "production"
         },
         module: {
             rules: [
@@ -36,6 +36,9 @@ module.exports = (env) => {
             new MiniCssExtractPlugin()
         ],
         devServer: {
+            static: {
+                directory: path.join(__dirname, 'src', 'assets', 'Images'),
+            },
             port: 5000,
             open: true
         }
