@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("header");document.addEventListener("scroll",(d=>{window.scrollY>450?e.classList.add("headerScrolledWrapper"):e.classList.remove("headerScrolledWrapper")}))})();
