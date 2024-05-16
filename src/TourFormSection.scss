@@ -379,6 +379,7 @@
     padding: 10px;
     gap: 10px;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   .tourFormSelectLabel{
@@ -485,7 +486,8 @@
       background: #F4F0E9;
     }
     &:focus{
-      border: 1px solid #A6A6A6
+      border: 1px solid #A6A6A6;
+      background: #F4F0E9;
     }
   }
 

@@ -9,7 +9,8 @@ module.exports = (env) => {
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].[contenthash].js',
-            clean: process.env.NODE_ENV === "production"
+            clean: process.env.NODE_ENV === "production",
+            assetModuleFilename: 'images/[hash][ext][query]'
         },
         module: {
             rules: [
