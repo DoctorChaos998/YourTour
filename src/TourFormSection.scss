@@ -223,6 +223,7 @@
   width: 26px;
   height: 26px;
   border-radius: 5px;
+  cursor: pointer;
 
   &:checked::before{
     content: '';
@@ -320,6 +321,7 @@
   .tourFormWrapper{
     margin-top: 75px;
     gap: 40px;
+    padding: 0 21px;
   }
 
   .tourFormHeaderContainer{
@@ -344,11 +346,13 @@
   }
 
   .tourFormContainer{
-    width: 318px;
+    //width: 318px;
     height: 1110px;
     padding: 20px 20px 40px 20px;
     gap: 30px;
     border-radius: 30px;
+    max-width: 680px;
+    width: 100%;
   }
 
   .tourFormInputContainer{
@@ -374,7 +378,7 @@
   }
 
   .tourFormTextArea{
-    width: 278px;
+    //width: 278px;
     height: 132px;
     padding: 10px;
     gap: 10px;

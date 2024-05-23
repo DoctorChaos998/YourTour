@@ -112,6 +112,26 @@
   }
 }
 
+//@media screen and (max-width: 950px) {
+//  .reviewsListContainer{
+//    margin-top: 0;
+//    width: 100%;
+//    gap: 18px;
+//    padding: 0 21px;
+//    flex-direction: column;
+//    align-items: center;
+//  }
+//
+//  .reviewCardContainer{
+//    width: auto;
+//    height: auto;
+//    padding: 20px;
+//    border-radius: 20px;
+//    gap: 40px;
+//    max-width: 450px;
+//  }
+//}
+
 @media screen and (max-width: 950px) {
   .reviewsWrapper {
     margin-top: 75px;
@@ -148,6 +168,7 @@
     gap: 18px;
     padding: 0 21px;
     flex-direction: column;
+    align-items: center;
   }
 
   .reviewCardContainer{
@@ -156,6 +177,7 @@
     padding: 20px;
     border-radius: 20px;
     gap: 40px;
+    max-width: 450px;
   }
 
   .review{
